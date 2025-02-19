@@ -1,0 +1,13 @@
+name: Keep Server Awake
+
+on:
+  schedule:
+    - cron: "*/10 * * * *" # Executa a cada 10 minutos
+  workflow_dispatch: # Permite rodar manualmente
+
+jobs:
+  wakeup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar requisição para o servidor
+        run: curl -X POST https://the-news-backend.onrender.com/auth/server-awake
