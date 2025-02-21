@@ -1,4 +1,4 @@
-name: Keep Server Awake
+name: New Data Webhook
 
 on:
   schedule:
