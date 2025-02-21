@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Enviar requisição para o servidor
-        run: curl -X POST https://backend.testeswaffle.org/webhooks/case/fetch?=bitencourt.igor@hotmail.com
+        run: curl -X GET https://backend.testeswaffle.org/webhooks/case/fetch?=bitencourt.igor@hotmail.com
