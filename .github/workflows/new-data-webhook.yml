@@ -1,0 +1,13 @@
+name: Keep Server Awake
+
+on:
+  schedule:
+    - cron: "0 * * * *" # Executa a cada 1 hora, no minuto 0
+  workflow_dispatch: # Permite rodar manualmente
+
+jobs:
+  wakeup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar requisição para o servidor
+        run: curl -X POST https://backend.testeswaffle.org/webhooks/case/fetch?=bitencourt.igor@hotmail.com
